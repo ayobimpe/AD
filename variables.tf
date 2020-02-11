@@ -31,6 +31,16 @@ variable "dir_type" {
 variable "dir_computer_ou" {
   default     = "OU=myapp,DC=myapp,DC=com"
 }
+
+variable "ssm_policy" {
+  type = list
+  default = ["arn:aws:iam::aws:policy/AmazonSSMManagedInstanceCore","arn:aws:iam::aws:policy/AmazonSSMDirectoryServiceAccess"]
+}
+
+
+
+
+
 # # Access
 # variable "trusted_ip_address" {}
 
